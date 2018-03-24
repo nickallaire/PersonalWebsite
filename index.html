@@ -6,7 +6,7 @@
 	<title>Nicholas Allaire</title>
 	<meta name="description" content="A personal website highlighting my accomplishments">
 	<meta name="author" content="Nicholas Allaire">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,16 +21,16 @@
 	</div>
 
 	<div class="content" id="about">
-		<span class="content-header">Hi I'm Nicholas Allaire</span>
+		<h1 class="content-header">Hi I'm Nicholas Allaire</h1>
 		<img id="profile-picture" src="profile-picture.jpg" alt="Profile Picture" />
 		<div id="websites">
-			<br /><span>Find me on:</span><br />
+			<h3>Find me on:</h3>
 			<a href="http://www.github.com/nickallaire" target="_blank"><img class="icon" src="github.svg" alt="Git Hub Icon"/></a>
 			<a href="https://www.linkedin.com/in/nicholas-allaire-70795b145/" target="_blank"><img class="icon" src="linkedin.png" alt="Linkedin Icon"/></a>
 		</div>
 		<div id="background-info">
 				<h2>A little about me...</h2>
-				<blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</blockquote>
+				<blockquote>I was born and raised in South Orange County, where I attended high school at Tesoro. Once I graduated I found myself in Santa Barbara. Afterwards I ventured south to San Diego where I finished up my undergrad. </blockquote>
 			</div>
 		<div class="flex-container">
 			<div id="hobbies">
@@ -43,7 +43,7 @@
 				</ul>
 			</div>
 			<div id="languages">
-				<h2>Languages</h2>
+				<h2>Skills</h2>
 				<ul>
 					<li>C</li>
 					<li>Java</li>
@@ -55,53 +55,60 @@
 					<li>HTML5</li>
 					<li>JavaScript</li>
 					<li>CSS</li>
+					<li>React/Redux</li>
+					<li>JSP</li>
+					<li>AJAX</li>
+					<li>Git</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
 	<div class="content" id="projects">
-		<span class="content-header">Projects</span>
+		<h1 class="content-header">Projects</h1>
 		<br /><br />
 	</div>
 
 	<div class="content" id="education">
-		<span class="content-header">Education</span>
-		<br /><br />
+		<h1 class="content-header">Education</h1>
 		<div class="school">
-			<span class="school-name">University of California San Diego, Sept 2015 &rarr; Mar 2018</span>
-			<br /><br />
-			<img class="school-img" src="ucsd.png" alt="UCSD" />
-			<span class="degree">Degree</span>
-			<br /><br />
-			<span class="degrees">Bachelors in Science: Computer Science</span>
-			<br />
-		</div>
-		<div class="school">
-			<span class="school-name">Santa Barbara City College, Aug 2012 &rarr; May 2015</span>
-			<br /><br />
-			<img class="school-img" src="sbcc.jpg" alt="SBCC" />
-			<span class="degree">Degrees</span>
-			<br /><br />
-			<span class="degrees">Associates in Science: Computer Science</span>
-			<br /><br />
-			<span class="degrees">Associates in Arts: Mathematics</span>
-			<br /><br />
-			<span class="degrees">Associates in Arts: Liberal Arts and Sciences</span>
-			<br /><br />
-			<span class="honorable-mentions">Honoroable Mentions</span>
-			<br /><br />
-			<span class="degrees">Graduated with Honors</span>
-			<br /><br />
-			<span class="degrees">President's Honor Roll (F.T.) x5</span>
-			<br /><br />
-			<span class="degrees">Computer Science Club Member</span>
-			<br />
+			<div id="ucsd">
+				<img class="school-img" id="ucsd-img" src="ucsd.png" alt="UCSD" />
+				<div id="panel1">
+					<h2>Sept 2015 &rarr; Mar 2018</h2>
+					<h4 class="degrees">Degree:</h4>
+					<h4 class="degree">Bachelors in Science: Computer Science</h4>
+				</div>
+			</div>
+			<div id="sbcc">
+				<img class="school-img" id="sbcc-img" src="sbcc.jpg" alt="SBCC" />
+				<div id="panel2">
+					<h2>Aug 2012 &rarr; May 2015</h4>
+					<h4 class="degrees">Degrees:</h4>
+					<h4 class="degree">Associates in Science: Computer Science</h4>
+					<h4 class="degree">Associates in Arts: Mathematics</h4>
+					<h4 class="degree">Associates in Arts: Liberal Arts</h4>
+					<h4 class="honorable-mentions">Honorable Mentions:</h4>
+					<h4 class="mention">Graduation with Honors</h4>
+					<h4 class="mention">President's Honor Roll (F.T) x5</h4>
+					<h4 class="mention">Computer Science Club Member</h4>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<div class="content" id="contact">
-		<span class="content-header">Contact Me</span><br /><br />
+		<h1 class="content-header">Contact Me</h1>
+		<p>Feel free to contact me if you have any thoughts on how I can improve my site or wish to speak with me</p>
+		<label>First Name:</label>
+		<input type="text" /><br /><br />
+		<label>Last Name:</label>
+		<input type="text" /><br /><br />
+		<label>Email:</label>
+		<input type="email" /><br /><br />
+		<label>Message:</label>
+		<textarea name="message" cols="75" rows="7"></textarea><br /><br />
+		<input type="submit" value="Send" />
 	</div>
 
 	<script src="script.js"></script>
