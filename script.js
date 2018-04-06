@@ -1,4 +1,4 @@
-// Function to toggle education panels
+// On ready click function
 $(document).ready(function() {
 	$("#ucsd-img").click(function() {
 		$("#panel1").toggle();
@@ -7,6 +7,34 @@ $(document).ready(function() {
 	$("#sbcc-img").click(function() {
 		$("#panel2").toggle();
 	});
+
+	$("#nav-button").click(function() {
+		$("#nav-bar").toggle();
+
+		if ($("#nav-bar").is(":visible")) {
+			$("#nav-button").removeClass("button-top");
+			$("#nav-button").addClass("move");
+		} else {
+			$("#nav-button").removeClass("move");
+			$("#nav-button").addClass("button-top");
+		}
+	});
+
+	$("#nav-button").addClass("button-top");
+	$("#nav-button").removeClass("move");
+	$(".nav-link").click(function() {
+		if ($("#nav-button").is(":visible")) {
+			$("#nav-bar").toggle();
+			$("#nav-button").addClass("button-top");
+			$("#nav-button").removeClass("move");
+		}
+	});
+
+	if ($("#nav-button").is(":visible")) {
+		$("#nav-bar").hide();
+	} else {
+		$("#nav-bar").show();
+	}
 });
 
 // Set nav bar item to active as you scroll/click on nav bar item
@@ -30,4 +58,16 @@ $(window).scroll(function() {
 	cur = cur[cur.length-1];
 	var id = cur && cur.length ? cur[0].id : "";
 	menuItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+});
+
+$(window).resize(function () {
+	if($(this).width() < 715) {
+		$("#nav-bar").hide();
+		$("#nav-button").addClass("button-top");
+		$("#nav-button").removeClass("move");
+	} else {
+		$("#nav-bar").show();
+		$("#nav-button").removeClass("button-top");
+		$("#nav-button").addClass("move");
+	}
 });

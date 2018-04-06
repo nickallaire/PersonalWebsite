@@ -39,6 +39,32 @@ html, body {
 	background-color: #59b300;
 }
 
+#nav-button {
+	position: fixed;
+	color: black;
+	display: none;
+	z-index: 10;
+	border: 1px solid black;
+	background-color: #bfbfbf;
+	/*box-shadow: 0px 0px 25px 3px #dddddd;*/
+	width: 30px;
+	height: 30px;
+}
+
+#nav-button:focus {
+	outline: 0;
+}
+
+.button-top {
+	right: 25px;
+	top: 25px;
+}
+
+.move {
+	right: 25px;
+	top: 213px;
+}
+
 .active {
 	background-color: #66cc00;
 }
@@ -64,7 +90,7 @@ span {
 
 #about {
 	position: relative;
-	height: 700px;
+	height: 750px;
 }
 
 #profile-picture {
@@ -100,8 +126,15 @@ span {
 }
 
 #hobbies {
+	position: relative;
+	padding-left: 16px;
+	margin-left: 100px;
 	order: 1;
-	flex-grow: 1;
+}
+
+#hobbies h2 {
+	position: relative;
+	left: 3%;
 }
 
 #hobbies ul {
@@ -114,9 +147,12 @@ span {
 
 #languages {
 	order: 0;
-	flex-grow: 1;
-	margin-right: 50px;
 	margin-bottom: 25px;
+}
+
+#languages h2 {
+	position: relative;
+	left: 20%;
 }
 
 #languages ul {
@@ -125,7 +161,8 @@ span {
 }
 
 #languages li {
-	padding: 5px;
+	padding: 5px 0 5px 0;
+	list-style-position: inside;
 }
 
 .flex-container {
@@ -133,11 +170,11 @@ span {
 	flex-direction: row;
 	flex-wrap: wrap;
 	position: relative;
-	width: 45%;
+	width: 62%;
 	margin: 0;
 	padding: 0;
-	top: -350px;
-	left: 350px;
+	top: -315px;
+	left: 315px;
 }
 
 #projects {
@@ -174,12 +211,14 @@ span {
 .school-img {
 	width: 200px;
 	height: 200px;
+	cursor: pointer;
 }
 
 #panel1 {
-	display: none;
+/*	display: none;*/
 	background-color: #00004d;
-	height: 150px;
+	height: auto;
+	padding-bottom: 25px;
 }
 
 #panel1 h2 {
@@ -188,10 +227,15 @@ span {
 	color: #cca300;
 }
 
+#panel1 h4 {
+	color: ghostwhite;
+}
+
 #panel2 {
-	display: none;
+/*	display: none;*/
 	background-color: #b30000;
-	height: 350px;
+	height: auto;
+	padding-bottom: 25px;
 }
 
 #panel2 h2 {
@@ -203,6 +247,10 @@ span {
 	color: black;
 	width: 275px;
 	text-align: center;
+}
+
+#panel h4 {
+	color:ghostwhite;
 }
 
 .degrees {
@@ -219,6 +267,42 @@ span {
 	text-align: left;
 	width: 310px;
 	margin: 0 0 12px 0;
+	font-weight: normal;
+}
+
+.courses {
+	position: relative;
+	left: 10%;
+	text-align: left;
+	width: 75px;
+}
+
+.course-list {
+	position: relative;
+	left: 8%;
+	text-align: left;
+	line-height: 30px;
+	width: 80%;
+}
+
+.course {
+	width: 70%;
+}
+
+.course-description {
+	position: relative;
+	left: 14%;
+	text-align: left;
+	width: 75%;
+	font-weight: normal;
+}
+
+#ucsd-link {
+	color: #cca300;
+}
+
+#sbcc-link {
+	color: black;
 }
 
 .honorable-mentions {
@@ -235,6 +319,7 @@ span {
 	text-align: left;
 	width: 250px;
 	margin: 0 0 12px 0;
+	font-weight: normal;
 }
 
 #contact {
@@ -242,14 +327,23 @@ span {
 	height: 535px;
 }
 
+textarea {
+	resize: none;
+}
+
 
 @media only screen and (max-width: 715px) {
-	#nav {
-		position: relative;
+
+	#nav-button {
+		display: block;
 	}
 
 	.nav-item {
 		width: 100%;
+	}
+
+	.content {
+		padding-top: 16px;
 	}
 
 	#about {
@@ -286,14 +380,14 @@ span {
 	}
 
 	.flex-container {
-		position: relative;
-		display: flex;
-		width: 90%;
+		width: 95%;
 		top: 0;
-		left: 10%;
+		left: 5%;
 	}
 
 	#languages {
+		left: 0;
+		top: 0;
 		margin-bottom: 0;
 		margin-right: 10px;
 		flex-grow: 1;
@@ -301,8 +395,11 @@ span {
 	}
 
 	#hobbies {
+		left: 0;
+		top: 0;
 		order: 1;
 		flex-grow: 1;
+		margin-left: 0px;
 	}
 
 	#education {
