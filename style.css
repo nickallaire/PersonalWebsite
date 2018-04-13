@@ -72,9 +72,9 @@ html, body {
 .content {
 	padding: 16px;
 	padding-top: 60px;
-	margin-bottom: 5px;
-	background-color: #b3b3b3;
-	color: white;
+	border-bottom: solid 5px #333;
+	/*background-color: #b3b3b3;*/
+	/*color: white;*/
 }
 
 .content-header {
@@ -91,6 +91,7 @@ span {
 #about {
 	position: relative;
 	height: 750px;
+	background-color: #dedede;
 }
 
 #profile-picture {
@@ -118,11 +119,11 @@ span {
 #background-info {
 	position: relative;
 	top: -350px;
-	left: 350px;
 	width: 50%;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	margin-bottom: 25px;
+	margin-left: 350px;
 }
 
 #hobbies {
@@ -170,7 +171,7 @@ span {
 	flex-direction: row;
 	flex-wrap: wrap;
 	position: relative;
-	width: 62%;
+	width: 60%;
 	margin: 0;
 	padding: 0;
 	top: -315px;
@@ -179,11 +180,44 @@ span {
 
 #projects {
 	position: relative;
-	height: 100%;
+	height: auto;
+	background-color: #eeeddd;
 }
 
+#project-flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	text-align: center;
+	margin-left: 2%;
+}
+
+.project {
+	order: 0;
+	flex-grow: 1;
+	width: 23%;
+	border: solid 3px black;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.project:hover {
+	background-color: yellow;
+}
+
+.project-description {
+	position: relative;
+	display: none;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding-left: 25px;
+	border: solid 3px blue;
+	width: 94.25%;
+}
 
 #education {
+	background-color: #dedede;
 	height: auto;
 }
 
@@ -214,10 +248,14 @@ span {
 	cursor: pointer;
 }
 
-#panel1 {
-/*	display: none;*/
-	background-color: #00004d;
+.panel {
 	height: auto;
+}
+
+#panel1 {
+	display: none;
+	background-color: #00004d;
+	/*height: auto;*/
 	padding-bottom: 25px;
 }
 
@@ -228,58 +266,60 @@ span {
 }
 
 #panel1 h4 {
-	color: ghostwhite;
+	color: white;
+}
+
+#panel1 ul {
+	color: white;
 }
 
 #panel2 {
-/*	display: none;*/
+	display: none;
 	background-color: #b30000;
-	height: auto;
+	/*height: inherit;*/
 	padding-bottom: 25px;
 }
 
 #panel2 h2 {
 	position: relative;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0%);
 	padding-top: 16px;
 	color: black;
-	width: 275px;
-	text-align: center;
 }
 
-#panel h4 {
-	color:ghostwhite;
+#panel2 h4 {
+	color: white;
+}
+
+#panel2 ul {
+	color: white;
 }
 
 .degrees {
 	position: relative;
-	left: 10%;
+	margin-left: 10%;
 	text-align: left;
 	width: 75px;
 }
 
 .degree {
 	position: relative;
-	left: 15%;
 	top: -12px;
 	text-align: left;
 	width: 310px;
-	margin: 0 0 12px 0;
+	margin: 0 0 12px 15%;
 	font-weight: normal;
 }
 
 .courses {
 	position: relative;
-	left: 10%;
+	margin-left: 10%;
 	text-align: left;
 	width: 75px;
 }
 
 .course-list {
 	position: relative;
-	left: 8%;
+	margin-left: 8%;
 	text-align: left;
 	line-height: 30px;
 	width: 80%;
@@ -291,7 +331,7 @@ span {
 
 .course-description {
 	position: relative;
-	left: 14%;
+	margin-left: 14%;
 	text-align: left;
 	width: 75%;
 	font-weight: normal;
@@ -307,24 +347,25 @@ span {
 
 .honorable-mentions {
 	position: relative;
-	left: 10%;
+	margin-left: 10%;
 	text-align: left;
 	width: 160px;
 }
 
 .mention {
 	position: relative;
-	left: 15%;
 	top: -12px;
 	text-align: left;
 	width: 250px;
-	margin: 0 0 12px 0;
+	margin: 0 0 12px 15%;
 	font-weight: normal;
 }
 
 #contact {
 	position: relative;
 	height: 535px;
+	background-color: #eeeddd;
+	border-bottom: none;
 }
 
 textarea {
@@ -375,6 +416,7 @@ textarea {
 		top: 0;
 		left: 0;
 		padding-left: 25px;
+		margin-left: 0;
 		margin-right: 0;
 		width: 90%;
 	}
@@ -402,6 +444,14 @@ textarea {
 		margin-left: 0px;
 	}
 
+	.project {
+		width: 100%;
+	}
+
+	.project-description {
+		width: 90.5%;
+	}
+
 	#education {
 		height: auto;
 	}
@@ -417,6 +467,10 @@ textarea {
 	}
 
 	#sbcc {
+		width: 100%;
+	}
+
+	textarea {
 		width: 100%;
 	}
 }
