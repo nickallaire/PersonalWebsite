@@ -196,7 +196,7 @@ span {
 .project {
 	order: 0;
 	flex-grow: 1;
-	width: 23%;
+	width: 31%;
 	border: solid 3px black;
 	margin-bottom: 15px;
 	margin-right: 15px;
@@ -214,6 +214,27 @@ span {
 	padding-left: 25px;
 	border: solid 3px blue;
 	width: 94.25%;
+}
+
+.display-img {
+	position: relative;
+	width: 75%;
+	height: 75%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+.listimg {
+	position: relative;
+	width: 25%;
+	height: 25%;
+	cursor: pointer;
+}
+
+.listimg-flexbox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 #education {
@@ -245,7 +266,6 @@ span {
 .school-img {
 	width: 200px;
 	height: 200px;
-	cursor: pointer;
 }
 
 .panel {
